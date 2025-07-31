@@ -1,6 +1,7 @@
 let date = new Date();
-const ts = date.getTime();
-console.log(ts)
+console.log(date.getTime()); 
+ts = 1753979713333;
+//Had to get the ts to generate a hash so because of that I need to keep the same ts which the previous logic did not work with
 const hash = "f5a24e557c97268344e771a2dcbb214f";
 const searchBtn = document.querySelector("#search");
 const results = document.querySelector("#results");
