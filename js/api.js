@@ -11,7 +11,8 @@ document.getElementById("search").addEventListener("click", async () => {
   const hash = CryptoJS.MD5(ts + privateKey + publicKey).toString();
 try{
  const url = `https://gateway.marvel.com/v1/public/characters?name=${encodeURIComponent(characterName)}&ts=${ts}&apikey=${publicKey}&hash=${hash}`;
-  const response = await fetch (url);
+  console.log("Fetching:", url);
+ const response = await fetch (url);
   const marvelData = await response.json();
 
   results.innerHTML = "";
